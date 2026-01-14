@@ -1,49 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>My Favorite Movies</title>
+<meta charset="UTF-8">
+<title>LV MAX | Corporate Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial}
+body{background:#0e1220;color:#f2f2f2;overflow-x:hidden}
+
+/* ===== HEADER ===== */
+header{
+    position:fixed;
+    top:0;width:100%;
+    padding:18px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(14,18,32,0.85);
+    backdrop-filter:blur(12px);
+    z-index:100;
+}
+.logo{
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+.logo span{color:#3aa9ff}
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:#ccc;
+    font-size:14px;
+    transition:0.3s;
+}
+nav a:hover{color:#3aa9ff}
+
+/* ===== HERO ===== */
+.hero{
+    height:100vh;
+    padding:0 18%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.hero h1{
+    font-size:56px;
+    font-weight:600;
+    line-height:1.25;
+}
+.hero h1 span{color:#3aa9ff}
+.hero p{
+    margin:25px 0;
+    max-width:600px;
+    color:#b9bdd1;
+    font-size:17px;
+}
+.hero button{
+    width:200px;
+    padding:14px;
+    border:none;
+    background:#3aa9ff;
+    color:#000;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.hero button:hover{
+    background:#1f8fe6;
+    transform:translateY(-3px);
+}
+
+/* ===== SECTION ===== */
+section{
+    padding:120px 18%;
+}
+section h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+section p{
+    color:#b9bdd1;
+    max-width:720px;
+}
+
+/* ===== SERVICES ===== */
+.services{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:35px;
+}
+.service{
+    padding:40px;
+    background:#151a30;
+    border-left:4px solid #3aa9ff;
+    transition:0.4s;
+}
+.service h3{margin-bottom:10px}
+.service:hover{
+    transform:translateY(-10px);
+    background:#1a2040;
+}
+
+/* ===== STATS ===== */
+.stats{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+    text-align:center;
+}
+.stat h3{
+    font-size:42px;
+    color:#3aa9ff;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    padding:40px 18%;
+    background:#0a0d18;
+    color:#888;
+    font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>My Favorite Movies</h1>
+    <div class="logo">LV <span>MAX</span></div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#company">Company</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<main>
-    <section>
-        <h2>Top 3 Movies</h2>
-        <ul>
-            <li>Interstellar</li>
-            <li>Inception</li>
-            <li>Avengers Endgame</li>
-        </ul>
-    </section>
+<section class="hero">
+    <h1>Enterprise Digital<br><span>Technology Solutions</span></h1>
+    <p>
+        LV MAX is a professional technology corporation delivering
+        scalable, secure and future-ready digital products for businesses.
+    </p>
+    <button>Contact Sales</button>
+</section>
 
-    <section>
-        <h2>Movie Posters</h2>
+<section id="about" class="reveal">
+    <h2>About LV MAX</h2>
+    <p>
+        We operate as a corporate-focused digital company,
+        supporting enterprises with long-term, reliable
+        technology solutions and professional consulting.
+    </p>
+</section>
 
-        <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
-             alt="Interstellar movie poster">
+<section id="services" class="reveal">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Enterprise Web Systems</h3>
+            <p>Corporate websites, portals, and internal platforms.</p>
+        </div>
+        <div class="service">
+            <h3>UI / UX Design</h3>
+            <p>Professional, business-oriented interface design.</p>
+        </div>
+        <div class="service">
+            <h3>Technology Consulting</h3>
+            <p>Digital transformation and strategic planning.</p>
+        </div>
+    </div>
+</section>
 
-        <img src="inception.jpg"
-                 alt="Inception movie poster showing a dream city bending scene">
+<section id="company" class="reveal">
+    <h2>Company Overview</h2>
+    <div class="stats">
+        <div class="stat">
+            <h3>80+</h3>
+            <p>Completed Projects</p>
+        </div>
+        <div class="stat">
+            <h3>15+</h3>
+            <p>Business Partners</p>
+        </div>
+        <div class="stat">
+            <h3>99%</h3>
+            <p>Client Satisfaction</p>
+        </div>
+    </div>
+</section>
 
-        <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg"
-             alt="Avengers Endgame movie poster">
-    </section>
-
-    <section>
-        <h2>More Information</h2>
-        <a href="https://www.imdb.com" target="_blank">Visit IMDB</a>
-    </section>
-</main>
+<section id="contact" class="reveal">
+    <h2>Contact Us</h2>
+    <p>
+        Email: contact@lvmax.com<br>
+        Phone: +84 123 456 789
+    </p>
+</section>
 
 <footer>
-    <p>Created by Duy Lợi</p>
+    © 2026 LV MAX Corporation. All rights reserved.
 </footer>
+
+<script>
+/* ===== SCROLL REVEAL ===== */
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+    reveals.forEach(el=>{
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 120){
+            el.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
 
 </body>
 </html>
-
-
